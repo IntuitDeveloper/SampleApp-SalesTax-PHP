@@ -1,8 +1,6 @@
 # CakePHP 3
 .DS_Store
 /vendor/*
-/config/app.php
-*/config.php
 
 /tmp/cache/models/*
 !/tmp/cache/models/empty
@@ -24,3 +22,19 @@
 /app/Config/core.php
 /app/Config/database.php
 /vendors/*
+
+composer.lock
+vendor/
+
+# Configuration files with secrets
+.env
+.env.local
+
+# Logs
+/tmp/qb_logs/
+/var/log/qb_logs/
+logs/
+*.log
+OAuth_2/stored_customers.json
+
+.idea/

@@ -1,0 +1,30 @@
+{
+    "input": {
+        "transactionDate": "",
+        "subject": {
+            "qbCustomerId": ""
+        },
+        "shipping": {
+            "shipFromAddress": {
+                "freeFormAddressLine": ""
+            },
+            "shipToAddress": {
+                "freeFormAddressLine": ""
+            },
+            "shippingFee": {
+                "value": 0.0
+            }
+        },
+        "lineItems": [
+            {
+                "numberOfUnits": 1,
+                "pricePerUnitExcludingTaxes": {
+                    "value": 100
+                },
+                "productVariantTaxability": {
+                    "productVariantId": ""
+                }
+            }
+        ]
+    }
+}

@@ -1,0 +1,53 @@
+mutation IndirectTaxCalculateSaleTransactionTax($input: IndirectTax_TaxCalculationInput!) {
+  indirectTaxCalculateSaleTransactionTax(input: $input) {
+    taxCalculation {
+      transactionDate
+      taxTotals {
+        totalTaxAmountExcludingShipping {
+          value
+        }
+      }
+      subject {
+        customer {
+          id
+        }
+      }
+      shipping {
+        shipToAddress {
+          rawAddress {
+            ... on IndirectTax_FreeFormAddress {
+              freeformAddressLine
+            }
+          }
+        }
+        shipFromAddress {
+          rawAddress {
+            ... on IndirectTax_FreeFormAddress {
+              freeformAddressLine
+            }
+          }
+        }
+        shippingFee {
+          value
+        }
+      }
+      lineItems {
+        edges {
+          node {
+            numberOfUnits
+            pricePerUnitExcludingTaxes {
+              value
+            }
+          }
+        }
+        nodes {
+          productVariantTaxability {
+            product {
+              id
+            }
+          }
+        }
+      }
+    }
+  }
+}
